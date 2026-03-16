@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" x-data>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Tiwari Sweets — Kanpur Ki Asli Mithaas Since 1968</title>
+  <meta name="description" content="Kanpur ka sabse purana aur bharosemand sweet shop. Pure Banarasi, Bengali, Cheena, Dryfruit aur Sugar Free sweets. Bulk orders for weddings & parties. Since 1968." />
+  <meta name="keywords" content="sweet shop kanpur, tiwari sweets, banarasi mithai, bengali sweets kanpur, sugar free sweets, bulk order sweets, jajmau kanpur" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪔</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="c-dot" id="cDot"></div>
+  <div class="c-ring" id="cRing"></div>
+
+  <!-- NAV -->
+  <nav class="nav" x-data="{ open: false }">
+    <div class="nav__inner">
+      <a href="#home" class="nav__logo">
+        <span class="nav__logo-flame">🪔</span>
+        <span class="nav__logo-text">New Tiwari <em>Sweets</em></span>
+      </a>
+
+      <ul class="nav__links" :class="{ 'nav__links--open': open }">
+        <li><a href="#about"    @click="open = false">Hamaari Kahani</a></li>
+        <li><a href="#services" @click="open = false">Mithaiyan</a></li>
+        <li><a href="#why-us"   @click="open = false">Kyun Hum?</a></li>
+        <li><a href="#reviews"  @click="open = false">Reviews</a></li>
+        <li><a href="#contact"  @click="open = false">Miliye</a></li>
+        <li><a href="tel:+919559186879" class="nav__cta" @click="open = false">📞 Call Karo</a></li>
+      </ul>
+
+      <button
+        class="nav__burger"
+        @click="open = !open"
+        :aria-expanded="open.toString()"
+        :class="{ 'nav__burger--active': open }"
+        aria-label="Toggle menu"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero__glow hero__glow--a" aria-hidden="true"></div>
+    <div class="hero__glow hero__glow--b" aria-hidden="true"></div>
+    <div class="hero__dots" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <div class="hero__badge">
+        <span class="hero__badge-pulse"></span>
+        Since 1968 &nbsp;·&nbsp; Jajmau, Kanpur
+      </div>
+
+      <h1 class="hero__heading">
+        <span class="hero__line1">Mithaas Jo</span>
+        <span class="hero__line2">Dil Chhu Jaaye</span>
+      </h1>
+
+      <p class="hero__sub">
+        Kanpur ki sabse asli aur bharosemand meethai — Banarasi, Bengali, Cheena,
+        Dryfruit aur Sugar Free. 56 saalon ka pyaar, har ek piece mein.
+      </p>
+
+      <div class="hero__actions">
+        <a href="tel:+919559186879" class="btn btn--primary btn--lg">
+          📞 Abhi Call Karo
+        </a>
+        <a href="#services" class="btn btn--outline btn--lg">
+          Mithaiyan Dekhein ↓
+        </a>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <strong>56+</strong>
+          <span>Saal Ka Tajurba</span>
+        </div>
+        <div class="hero__stat-sep" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <strong>1000+</strong>
+          <span>Khush Grahak</span>
+        </div>
+        <div class="hero__stat-sep" aria-hidden="true"></div>
+        <div class="hero__stat">
+          <strong>50+</strong>
+          <span>Sweet Varieties</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero__scroll" aria-hidden="true">↓</div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>🍮 Banarasi Peda</span><span class="msep">✦</span>
+      <span>🍰 Bengali Rasgulla</span><span class="msep">✦</span>
+      <span>🥛 Cheena Mithai</span><span class="msep">✦</span>
+      <span>🥜 Dryfruit Barfi</span><span class="msep">✦</span>
+      <span>🌿 Sugar Free Sweets</span><span class="msep">✦</span>
+      <span>📦 Bulk Wedding Orders</span><span class="msep">✦</span>
+      <span>🏪 Wholesale Supply</span><span class="msep">✦</span>
+      <span>🎉 Festival Specials</span><span class="msep">✦</span>
+      <span>🍮 Banarasi Peda</span><span class="msep">✦</span>
+      <span>🍰 Bengali Rasgulla</span><span class="msep">✦</span>
+      <span>🥛 Cheena Mithai</span><span class="msep">✦</span>
+      <span>🥜 Dryfruit Barfi</span><span class="msep">✦</span>
+      <span>🌿 Sugar Free Sweets</span><span class="msep">✦</span>
+      <span>📦 Bulk Wedding Orders</span><span class="msep">✦</span>
+      <span>🏪 Wholesale Supply</span><span class="msep">✦</span>
+      <span>🎉 Festival Specials</span><span class="msep">✦</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__inner">
+
+        <div class="about__visual">
+          <div class="about__frame">
+            <div class="about__frame-body">
+              <span class="about__diya">🪔</span>
+              <span class="about__year-text">1968</span>
+              <p class="about__est">Kanpur Ka Apna</p>
+            </div>
+            <div class="about__frame-corner about__frame-corner--tl"></div>
+            <div class="about__frame-corner about__frame-corner--tr"></div>
+            <div class="about__frame-corner about__frame-corner--bl"></div>
+            <div class="about__frame-corner about__frame-corner--br"></div>
+          </div>
+          <div class="about__badge-pill">
+            <span>56</span>
+            <small>Saalon Ki<br/>Virasat</small>
+          </div>
+        </div>
+
+        <div class="about__content">
+          <p class="eyebrow">Humaari Kahani</p>
+          <h2 class="section__title">
+            Raj Dev Tiwari —<br/><em>Ek Naam, Ek Bharosa</em>
+          </h2>
+
+          <p class="about__para">
+            1968 mein ek chhota sa sapna leke nikle the Raj Dev ji — aur aaj Kanpur ke
+            Jajmau mein unka naam meethai ka paryaay ban gaya hai. Late 60s mein bhi
+            woh young dil se jeete hain. Dukaan mein qaddam rakho — woh khud milenge,
+            hansenge, aur agar quality mein kami hui toh seedha bol denge. Koi filter
+            nahin, koi nautanki nahin. Yehi hai Raj Dev ji ka asli andaaz.
+          </p>
+
+          <p class="about__para">
+            Holi ho ya Diwali, woh sirf apne ghar mein nahin manate — poore mohalle ke
+            saath manate hain. Tyohaar unke liye sirf business nahin, dil ka mamla hai.
+            Ab unke bete ne dukaan ki zimmedaari sambhaal li hai — corporate background
+            se naye ideas laata hai, experiment karta hai — lekin purani rooh waisi hi rehti hai.
+          </p>
+
+          <div class="about__pillars">
+            <div class="about__pillar reveal">
+              <span class="pillar-icon">🤝</span>
+              <div>
+                <strong>Regular = Parivaar</strong>
+                <p>Unke regular customers unhe sirf dukaan waale nahin, dost kehte hain.</p>
+              </div>
+            </div>
+            <div class="about__pillar reveal">
+              <span class="pillar-icon">🎊</span>
+              <div>
+                <strong>Festival Wali Bhaavna</strong>
+                <p>Holi-Diwali mein khud kaam karte hain — family ke saath, family ke liye.</p>
+              </div>
+            </div>
+            <div class="about__pillar reveal">
+              <span class="pillar-icon">🚀</span>
+              <div>
+                <strong>Naya Soch, Purani Rooh</strong>
+                <p>Beta corporate ideas laata hai, shop ko aage le jaata hai. Experiment + tradition.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section__header">
+        <p class="eyebrow eyebrow--light">Hamaari Mithaiyan</p>
+        <h2 class="section__title section__title--light">
+          Har Occasion Ke Liye,<br/><em>Har Taste Ke Liye</em>
+        </h2>
+        <p class="section__desc">
+          Pure ghee, fresh ingredients, aur 56 saalon ka tajurba — yahi hai hamaara formula.
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <div class="svc-card reveal">
+          <div class="svc-card__head">
+            <span class="svc-card__icon">🍮</span>
+            <span class="svc-tag">Bestseller</span>
+          </div>
+          <h3>Pure Banarasi Sweets</h3>
+          <p>Kashi ki asli mithaas — Peda, Kalakand, Malaiyyo. Har cheez mein Banaras ka dil basata hai.</p>
+        </div>
+
+        <div class="svc-card reveal">
+          <div class="svc-card__head">
+            <span class="svc-card__icon">🍰</span>
+          </div>
+          <h3>Bengali Sweets</h3>
+          <p>Rasgulla, Sandesh, Chomchom — Bengal ki authentic recipe, Kanpur ka pyaar. Ekdum fresh daily.</p>
+        </div>
+
+        <div class="svc-card reveal">
+          <div class="svc-card__head">
+            <span class="svc-card__icon">🥛</span>
+          </div>
+          <h3>Cheena Sweets</h3>
+          <p>Fresh cheena se bani mithaiyan — halki, soft, aur muh mein ghul jaane wali. Ek khaao, bus nahin hoga.</p>
+        </div>
+
+        <div class="svc-card reveal">
+          <div class="svc-card__head">
+            <span class="svc-card__icon">🥜</span>
+            <span class="svc-tag">Gift-Ready</span>
+          </div>
+          <h3>Dryfruit Sweets</h3>
+          <p>Kaju Barfi, Pista Roll, Anjeer Mithai — gift karo ya khud khao, sab khush rehte hain.</p>
+        </div>
+
+        <div class="svc-card reveal">
+          <div class="svc-card__head">
+            <span class="svc-card__icon">🌿</span>
+            <span class="svc-tag">Health Pick</span>
+          </div>
+          <h3>Sugar Free Sweets</h3>
+          <p>Diabetes hai? Tension mat lo. Hamaari sugar free range — meethi mithaas, bilkul zero compromise.</p>
+        </div>
+
+        <div class="svc-card svc-card--featured reveal">
+          <div class="svc-card__head">
+            <span class="svc-card__icon">📦</span>
+            <span class="svc-tag svc-tag--gold">Bulk Orders</span>
+          </div>
+          <h3>Wholesale &amp; Event Orders</h3>
+          <p>Shaadi, party, pooja — bade orders bhi lete hain. Doosre stores ko bhi supply karte hain Kanpur mein.</p>
+          <a href="tel:+919559186879" class="svc-card__link">Order Karo Abhi →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="why section" id="why-us">
+    <div class="container">
+      <div class="why__inner">
+
+        <div class="why__left">
+          <p class="eyebrow">Kyun Tiwari Sweets?</p>
+          <h2 class="section__title">
+            Baat Seedhi,<br/><em>Mithaas Asli</em>
+          </h2>
+          <p class="why__intro">
+            Koi gimmick nahin. Koi discount trap nahin. Sirf 56 saalon ka bharosa aur
+            ek maalik jo quality se kabhi samjhauta nahin karta.
+          </p>
+
+          <div class="why__list">
+            <div class="why-item reveal">
+              <div class="why-item__num">01</div>
+              <div class="why-item__body">
+                <h3>56 Saal Ka Antodit Bharosa</h3>
+                <p>1968 se ab tak — teen pidhiyaan, ek hi naam. Yeh koi marketing stunt nahin, yeh history hai.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__num">02</div>
+              <div class="why-item__body">
+                <h3>Owner Khud Karta Hai Quality Check</h3>
+                <p>Raj Dev ji ka rule — agar unhe achha nahin laga toh counter pe nahin aayega. Full stop.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__num">03</div>
+              <div class="why-item__body">
+                <h3>Festival Pe Extra Love</h3>
+                <p>Holi aur Diwali mein khud kaam karte hain — special items, special vibe, special prices.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__num">04</div>
+              <div class="why-item__body">
+                <h3>Regular Ko Milta Hai Asli Maza</h3>
+                <p>Yahan regular customers sirf customer nahin — parivaar hain. Yeh rishta paise se nahin banta.</p>
+              </div>
+            </div>
+            <div class="why-item reveal">
+              <div class="why-item__num">05</div>
+              <div class="why-item__body">
+                <h3>Naya Soch, Purani Rooh Ke Saath</h3>
+                <p>Beta corporate ideas laata hai, experiment hota hai — lekin quality haamesha maintain rehti hai.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="why__right">
+          <div class="qcard">
+            <span class="qcard__mark" aria-hidden="true">"</span>
+            <blockquote>
+              Meethai banane ka koi shortcut nahin hota. Agar quality se ek baar
+              samjhauta kiya, toh meri dukaan se better hai band kar do.
+            </blockquote>
+            <footer>
+              <span class="qcard__name">Raj Dev Tiwari</span>
+              <span class="qcard__role">Founder, New Tiwari Sweets · 1968</span>
+            </footer>
+          </div>
+          <div class="why__deco-icons" aria-hidden="true">
+            <span>🪔</span>
+            <span>🍮</span>
+            <span>🌸</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <div class="section__header">
+        <p class="eyebrow">Log Kya Kehte Hain</p>
+        <h2 class="section__title">Kanpur Bolti Hai,<br/><em>Hum Sunate Hain</em></h2>
+      </div>
+
+      <div class="reviews__grid">
+        <article class="rcard reveal">
+          <div class="rcard__stars" aria-label="5 stars">★★★★★</div>
+          <p>"Tiwari ji ki meethai khaane ke baad koi aur meethai achhi nahin lagti.
+             20 saal se aata hoon — yeh rishta hai, business nahin."</p>
+          <footer>
+            <strong>Suresh Kumar</strong>
+            <span>Regular Customer, Jajmau</span>
+          </footer>
+        </article>
+
+        <article class="rcard reveal">
+          <div class="rcard__stars" aria-label="5 stars">★★★★★</div>
+          <p>"Beti ki shaadi mein 50 kilo dryfruit mithai order ki — quality ekdum
+             solid thi. Mehmaanon ne baar baar poochha kahan se li. Lifelong customer
+             ban gaya hoon main."</p>
+          <footer>
+            <strong>Ramesh Verma</strong>
+            <span>Wedding Order, Kanpur</span>
+          </footer>
+        </article>
+
+        <article class="rcard reveal">
+          <div class="rcard__stars" aria-label="5 stars">★★★★★</div>
+          <p>"Sugar free meethai jo actually meethi lage — yeh sirf Tiwari Sweets mein
+             milti hai. Diabetic hoon par Diwali pe ab koi compromise nahin karna padta."</p>
+          <footer>
+            <strong>Sheela Agarwal</strong>
+            <span>Sugar Free Fan, Adarsh Nagar</span>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <p class="eyebrow eyebrow--light">Miliye Humse</p>
+        <h2 class="section__title section__title--light">
+          Aao, Baat Karte Hain —<br/><em>Meethai Ke Saath</em>
+        </h2>
+      </div>
+
+      <div class="contact__inner">
+        <div class="contact__details">
+
+          <div class="cinfo-card">
+            <span class="cinfo-card__icon">📍</span>
+            <div>
+              <strong>Dukaan Ka Pata</strong>
+              <p>299, 1, Tiwaripur Rd, Adarsh Nagar<br/>Jajmau, Kanpur, UP 208010</p>
+            </div>
+          </div>
+
+          <div class="cinfo-card">
+            <span class="cinfo-card__icon">📞</span>
+            <div>
+              <strong>Phone / WhatsApp</strong>
+              <p><a href="tel:+919559186879">+91 95591 86879</a></p>
+            </div>
+          </div>
+
+          <div class="cinfo-card">
+            <span class="cinfo-card__icon">🕖</span>
+            <div>
+              <strong>Khulne Ka Waqt</strong>
+              <p>Subah 7 Baje — Raat 10:30 Baje</p>
+              <em>Har Roz · Festival Pe Bhi!</em>
+            </div>
+          </div>
+
+          <div class="cinfo-card">
+            <span class="cinfo-card__icon">📸</span>
+            <div>
+              <strong>Instagram</strong>
+              <p><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">@NewTiwariSweets</a></p>
+            </div>
+          </div>
+
+          <div class="contact__btns">
+            <a href="tel:+919559186879" class="btn btn--primary">
+              📞 Abhi Call Karo
+            </a>
+            <a
+              href="https://wa.me/919559186879?text=Bhai%2C%20meethai%20ke%20baare%20mein%20baat%20karni%20thi!"
+              class="btn btn--whatsapp"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              💬 WhatsApp Karo
+            </a>
+          </div>
+        </div>
+
+        <div class="contact__map">
+          <div class="map-box">
+            <span class="map-box__emoji">🗺️</span>
+            <p class="map-box__city">Jajmau, Kanpur</p>
+            <p class="map-box__addr">299, 1, Tiwaripur Rd<br/>Adarsh Nagar, Jajmau</p>
+            <a
+              href="https://maps.google.com/?q=299,+1,+Tiwaripur+Rd,+Adarsh+Nagar,+Jajmau,+Kanpur,+Uttar+Pradesh+208010"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn--primary"
+            >
+              Google Maps Pe Dekho →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+
+        <div class="footer__brand">
+          <span class="footer__logo">🪔 New Tiwari Sweets</span>
+          <p>Kanpur ki asli meethai — 1968 se aaj tak.<br/>Pyaar se banaate hain, pyaar se khaate hain.</p>
+        </div>
+
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#about">Hamaari Kahani</a>
+          <a href="#services">Mithaiyan</a>
+          <a href="#why-us">Kyun Hum</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Miliye</a>
+        </nav>
+
+        <div class="footer__reach">
+          <a href="tel:+919559186879">+91 95591 86879</a>
+          <p>Subah 7 — Raat 10:30</p>
+          <p>Jajmau, Kanpur · UP 208010</p>
+        </div>
+
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 New Tiwari Sweets &nbsp;·&nbsp; Since 1968 &nbsp;·&nbsp; Made with ❤️ in Kanpur</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP FLOAT -->
+  <a
+    class="wa-float"
+    href="https://wa.me/919559186879?text=Bhai%2C%20meethai%20ke%20baare%20mein%20baat%20karni%20thi!"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="WhatsApp pe baat karo"
+  >
+    <span class="wa-float__ring"></span>
+    <svg class="wa-float__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
